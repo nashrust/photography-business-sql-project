@@ -1,22 +1,38 @@
 /*
-====================================================
+=========================================================
 02_load_data.sql
-====================================================
+=========================================================
 
-Project Data Loading Process
+Purpose:
+Load the raw CSV datasets into PostgreSQL.
 
-The raw datasets for this project were manually created to
-simulate a photography business database.
-
-The CSV files included in the Data folder were imported into
-PostgreSQL before the data cleaning process began.
-
-Files:
+Datasets:
 - clients_raw_data.csv
 - sessions_raw_data.csv
 - package_raw_data.csv
 - booking_raw_data.csv
 
-The imported data was then cleaned, validated, and transformed
-into analytics-ready tables.
+Method:
+The CSV files were imported into the corresponding RAW tables
+using pgAdmin's Import/Export Data tool.
+
+Target Tables:
+- CLIENTS_RAW
+- SESSIONS_RAW
+- PACKAGE_RAW
+- BOOKING_RAW
+
+After importing, row counts were verified before data cleaning.
 */
+
+SELECT COUNT(*) AS client_records
+FROM CLIENTS_RAW;
+
+SELECT COUNT(*) AS session_records
+FROM SESSIONS_RAW;
+
+SELECT COUNT(*) AS package_records
+FROM PACKAGE_RAW;
+
+SELECT COUNT(*) AS booking_records
+FROM BOOKING_RAW;
