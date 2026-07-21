@@ -25,14 +25,22 @@ Target Tables:
 After importing, row counts were verified before data cleaning.
 */
 
-SELECT COUNT(*) AS client_records
-FROM CLIENTS_RAW;
+SELECT 'CLIENTS_RAW' AS table_name, COUNT(*) AS total_records
+FROM CLIENTS_RAW
 
-SELECT COUNT(*) AS session_records
-FROM SESSIONS_RAW;
+UNION ALL
 
-SELECT COUNT(*) AS package_records
-FROM PACKAGE_RAW;
+SELECT 'SESSIONS_RAW', COUNT(*)
+FROM SESSIONS_RAW
 
-SELECT COUNT(*) AS booking_records
-FROM BOOKING_RAW;
+UNION ALL
+
+SELECT 'PACKAGE_RAW', COUNT(*)
+FROM PACKAGE_RAW
+
+UNION ALL
+
+SELECT 'BOOKINGS', COUNT(*)
+FROM BOOKINGS;
+
+
