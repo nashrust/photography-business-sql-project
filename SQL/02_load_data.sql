@@ -10,7 +10,7 @@ Datasets:
 - clients_raw_data.csv
 - sessions_raw_data.csv
 - package_raw_data.csv
-- booking_raw_data.csv
+- bookings_data.csv
 
 Method:
 The CSV files were imported into the corresponding RAW tables
@@ -20,7 +20,7 @@ Target Tables:
 - CLIENTS_RAW
 - SESSIONS_RAW
 - PACKAGE_RAW
-- BOOKING_RAW
+- BOOKINGS
 
 After importing, row counts were verified before data cleaning.
 */
