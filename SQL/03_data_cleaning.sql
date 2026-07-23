@@ -27,7 +27,6 @@ Cleaning tasks performed:
 
 
 =========================================================
-SECTION 1
 Clean CLIENTS_RAW
 =========================================================
 
@@ -41,7 +40,6 @@ Cleaning performed:
 
 
 =========================================================
-SECTION 2
 Clean SESSIONS_RAW
 =========================================================
 
@@ -56,7 +54,6 @@ Cleaning performed:
 
 
 =========================================================
-SECTION 3
 Clean PACKAGE_RAW
 =========================================================
 
@@ -94,7 +91,6 @@ one fifty → $150.00
 
 
 =========================================================
-SECTION 4
 Clean BOOKING_RAW
 =========================================================
 
@@ -106,6 +102,120 @@ Cleaning performed:
 ✓ Standardized IDs
 
 
+=========================================================
+Validation Queries
+=========================================================
+==================================
+STEP 1 :Checked for the total number of records make sure no records were deleted.
+==================================
+SELECT COUNT(*)
+FROM CLIENTS_RAW;
 
+SELECT COUNT(*)
+FROM CLEAN_CLIENTS;
 
+SELECT COUNT(*)
+FROM SESSIONS_RAW;
+
+SELECT COUNT(*)
+FROM CLEAN_SESSIONS;
+
+SELECT COUNT(*)
+FROM PACKAGE_RAW;
+
+SELECT COUNT(*)
+FROM CLEANE_PACKAGE;
+==================================
+STEP 2 :Check for any missing values
+==================================
+
+SELECT *
+FROM CLEAN_PACKAGE
+WHERE FINAL_PACKAGE_TIER = 'Missing';
+
+SELECT *
+FROM CLEAN_PACKAGE
+WHERE FINAL_PRICE = '$0.00';
+
+SELECT *
+FROM CLEAN_CLIENTS
+WHERE EMAIL_ADDRESS IS NULL;
+
+SELECT *
+FROM CLEAN_PACKAGE
+WHERE FINAL_DURATION = 0;
+
+SELECT *
+FROM CLEAN_CLIENTS
+WHERE PHONE_NUMBER IS NULL;
+
+=======================================================
+Step 3 :Check Distinct Values and invalid package names
+=======================================================
+
+SELECT DISTINCT FINAL_PACKAGE_TIER
+FROM CLEAN_PACKAGE
+ORDER BY FINAL_PACKAGE_TIER;
+
+SELECT DISTINCT FINAL_PACKAGE_TIER
+FROM CLEAN_PACKAGE
+WHERE FINAL_PACKAGE_TIER NOT IN
+(
+'Basic',
+'Standard',
+'Premium',
+'Deluxe',
+'Luxury',
+'Missing'
+);
+
+==========================
+4. Find Duplicate Records
+==========================
+
+SELECT EMAIL_ADDRESS,
+       COUNT(*)
+FROM CLEAN_CLIENTS
+GROUP BY EMAIL_ADDRESS
+HAVING COUNT(*) > 1;
+
+SELECT PHONE_NUMBER,
+       COUNT(*)
+FROM CLEAN_CLIENTS
+GROUP BY PHONE_NUMBER
+HAVING COUNT(*) > 1;
+
+==================================
+5. Validate Business Rules
+==================================
+
+SELECT *
+FROM CLEAN_PACKAGE
+WHERE
+      (FINAL_PACKAGE_TIER='Basic'    AND FINAL_DURATION<>45)
+   OR (FINAL_PACKAGE_TIER='Standard' AND FINAL_DURATION<>60)
+   OR (FINAL_PACKAGE_TIER='Premium'  AND FINAL_DURATION<>120)
+   OR (FINAL_PACKAGE_TIER='Deluxe'   AND FINAL_DURATION<>240)
+   OR (FINAL_PACKAGE_TIER='Luxury'   AND FINAL_DURATION<>480);
+
+SELECT *
+FROM CLEAN_PACKAGE
+WHERE
+      (FINAL_PACKAGE_TIER='Basic'    AND FINAL_PRICE<>'$150.00')
+   OR (FINAL_PACKAGE_TIER='Standard' AND FINAL_PRICE<>'$199.99')
+   OR (FINAL_PACKAGE_TIER='Premium'  AND FINAL_PRICE<>'$299.99')
+   OR (FINAL_PACKAGE_TIER='Deluxe'   AND FINAL_PRICE<>'$599.99')
+   OR (FINAL_PACKAGE_TIER='Luxury'   AND FINAL_PRICE<>'$2999.99');
+
+====================
+6. Check Formatting
+=====================
+
+SELECT *
+FROM CLEAN_CLIENTS
+WHERE LENGTH(PHONE_NUMBER) <> 10;
+
+SELECT *
+FROM CLEAN_CLIENTS
+WHERE EMAIL_ADDRESS NOT LIKE '%@%.%';
 
