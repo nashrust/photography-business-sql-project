@@ -1,9 +1,6 @@
-# photography-business-sql-project
-End-to-end SQL project starting with table creation, data cleaning and using PostgreSQL to analyze the photography business dataset
-# 📸 Photography Business SQL Project
+# Photography Business SQL Project
 
-## 📖 Project Overview
-
+##  Project Overview
 This project demonstrates an end-to-end SQL data analytics workflow by designing, building, cleaning, validating, and analyzing a relational database for a fictional photography business.
 
 The raw datasets were intentionally created with inconsistent formatting, missing values, misspelled text, duplicate records, and invalid values to simulate real-world data quality issues. SQL was then used to clean, standardize, validate, and analyze the data.
@@ -12,7 +9,7 @@ This project showcases practical SQL skills used by data analysts and database p
 
 ---
 
-# 🎯 Objectives
+#  Objectives
 
 - Design a relational database
 - Create normalized database tables
@@ -25,7 +22,7 @@ This project showcases practical SQL skills used by data analysts and database p
 
 ---
 
-# 🛠 Technologies Used
+#  Technologies Used
 
 - PostgreSQL
 - pgAdmin 4
@@ -36,7 +33,7 @@ This project showcases practical SQL skills used by data analysts and database p
 
 ---
 
-# 🗂 Project Structure
+#  Project Structure
 
 ```
 photography-business-sql-project/
@@ -74,7 +71,7 @@ photography-business-sql-project/
 
 ---
 
-# 📊 Database Design
+#  Database Design
 
 The database was designed using an Entity Relationship Diagram (ERD) before implementation.
 
@@ -87,15 +84,11 @@ The project contains four related tables:
 
 Relationships were established using primary and foreign keys to ensure data integrity.
 
-*(Insert your ERD image here)*
+![Entity Relationship Diagram]
+(Images/E<img width="1848" height="312" alt="ERD" src="https://github.com/user-attachments/assets/290fadab-26b1-4a94-a932-95dd580a4569" /> RD.png)
 
-```markdown
-![ERD](Images/ERD.png)
-```
 
----
-
-# 🔄 Project Workflow
+#  Project Workflow
 
 This project followed a complete data analytics workflow:
 
@@ -107,15 +100,7 @@ This project followed a complete data analytics workflow:
 6. Validated the cleaned data
 7. Performed business analysis using SQL
 
-*(Insert your workflow image here)*
-
-```markdown
-![Workflow](Images/project_workflow.png)
-```
-
 ---
-
-# 🧹 Data Cleaning Process
 
 The raw datasets contained numerous data quality issues, including:
 
@@ -155,17 +140,38 @@ Example corrections:
 | one fifty | $150.00 |
 | sixty | 60 |
 
-*(Insert screenshots of the raw and cleaned data here)*
+## Raw Data
 
-```markdown
-![Raw Data](Images/raw_data_preview.png)
+### Clients
+<img width="875" height="525" alt="RAW_CLIENT IMAGE" src="https://github.com/user-attachments/assets/929cf26d-08db-4d63-af72-0f63595e9d1d" />
 
-![Clean Data](Images/clean_data_preview.png)
-```
+### Sessions
+<img width="879" height="532" alt="RAW_ SESSION IMAGE" src="https://github.com/user-attachments/assets/b7f6d238-6aeb-41cf-9da2-1330c03cead8" />
+
+### Packages
+<img width="878" height="519" alt="RAW_PACKAGE IMAGE" src="https://github.com/user-attachments/assets/bb060d36-4498-4f2b-8ace-6d8ae2f203e9" />
+
+### Bookings
+<img width="481" height="545" alt="BOOKINGS_RAW IMAGE" src="https://github.com/user-attachments/assets/586ddde0-6eb8-4503-b160-5ad22fb3dafe" />
+
+ 
+### Clean Data
+
+### Clients
+<img width="755" height="545" alt="CLEANED_CLIENTS IMAGE" src="https://github.com/user-attachments/assets/4f1d4ec3-f6c5-462d-889c-e7d1014336cc" />
+
+### Session 
+<img width="776" height="540" alt="CLEANED_SESSION IMAGE" src="https://github.com/user-attachments/assets/99895a66-ae3d-4bef-9e90-1e86667b922e" />
+
+### Package
+<img width="394" height="568" alt="CLEANED_PACKAGE IMAGE" src="https://github.com/user-attachments/assets/803facae-a562-453b-b8b4-a375216754c6" />
+
+### Booking
+<img width="490" height="544" alt="CLEANED_BOOKING IMAGE" src="https://github.com/user-attachments/assets/0eb2d85c-5ad9-4e9d-9eec-5a05d4613727" />
 
 ---
 
-# ✅ Data Validation
+#  Data Validation
 
 After cleaning, validation queries were used to verify data quality.
 
@@ -188,7 +194,7 @@ Validation included:
 
 ---
 
-# 📈 SQL Analysis
+#  SQL Analysis
 
 Once the data was cleaned, SQL queries were used to analyze the business data.
 
@@ -209,7 +215,7 @@ Example analyses included:
 
 ---
 
-# 📁 SQL Files
+#  SQL Files
 
 | File | Description |
 |------|-------------|
@@ -222,7 +228,7 @@ Example analyses included:
 
 ---
 
-# 📌 Key SQL Skills Demonstrated
+#  Key SQL Skills Demonstrated
 
 - Database Design
 - Relational Databases
@@ -242,7 +248,7 @@ Example analyses included:
 
 ---
 
-# 📚 What I Learned
+#  What I Learned
 
 Through this project I strengthened my ability to:
 
@@ -258,7 +264,7 @@ Through this project I strengthened my ability to:
 
 ---
 
-# 🚀 Future Improvements
+#  Future Improvements
 
 Possible enhancements include:
 
@@ -272,7 +278,7 @@ Possible enhancements include:
 
 ---
 
-# 👤 Author
+#  Author
 
 **Nash Rust**
 
