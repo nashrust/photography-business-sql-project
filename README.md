@@ -69,7 +69,6 @@ photography-business-sql-project/
     └── analysis_results.png
 ```
 
----
 
 #  Database Design
 
@@ -100,7 +99,8 @@ This project followed a complete data analytics workflow:
 6. Validated the cleaned data
 7. Performed business analysis using SQL
 
----
+<img width="567" height="571" alt="CLEA_ DATA VALIDATION IMAGE" src="https://github.com/user-attachments/assets/acdc5355-f6cc-4c04-80ee-fba7a113204c" />
+ #  Data Cleaning Process
 
 The raw datasets contained numerous data quality issues, including:
 
@@ -188,9 +188,8 @@ Validation included:
 - Phone number formatting
 
 
-```markdown
-![Validation](Images/validation_results.png)
-```
+<img width="567" height="571" alt="CLEA_ DATA VALIDATION IMAGE" src="https://github.com/user-attachments/assets/ce51e261-bb9b-47a3-b435-97f92a49e659" />
+
 
 ---
 
