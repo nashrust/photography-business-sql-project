@@ -210,7 +210,6 @@ Example analyses included:
 - Package popularity
 - Session type distribution
 - Customer counts
-- Revenue by package tier
 - Booking trends
 - Session trends
 
@@ -221,6 +220,9 @@ Example analyses included:
 <img width="401" height="547" alt="Customer with the most booked sessions" src="https://github.com/user-attachments/assets/c30acae9-7889-497d-81e5-7256ec18d63a" />
 
 <img width="327" height="402" alt="Most_Popular_Package" src="https://github.com/user-attachments/assets/a6cc1868-6b82-4410-8b01-8f2f87ca0d03" />
+
+<img width="436" height="300" alt="Total_Customers" src="https://github.com/user-attachments/assets/e8b7aba9-b869-44d5-a36f-9d8b4811be37" />
+
 
 
 ---
