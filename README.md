@@ -88,7 +88,6 @@ Relationships were established using primary and foreign keys to ensure data int
 
 
 #  Project Workflow
-
 This project followed a complete data analytics workflow:
 
 1. Designed the database schema
@@ -99,9 +98,7 @@ This project followed a complete data analytics workflow:
 6. Validated the cleaned data
 7. Performed business analysis using SQL
 
-<img width="567" height="571" alt="CLEA_ DATA VALIDATION IMAGE" src="https://github.com/user-attachments/assets/acdc5355-f6cc-4c04-80ee-fba7a113204c" />
- #  Data Cleaning Process
-
+## RAW DATA
 The raw datasets contained numerous data quality issues, including:
 
 - Leading and trailing spaces
@@ -114,33 +111,8 @@ The raw datasets contained numerous data quality issues, including:
 - Inconsistent phone numbers
 - Mixed text and numeric values
 
-Cleaning techniques included:
-
-- TRIM()
-- LOWER()
-- INITCAP()
-- COALESCE()
-- NULLIF()
-- CASE expressions
-- REGEXP_REPLACE()
-- CAST()
-- TO_CHAR()
-
-Business rules were applied to standardize package tiers, durations, and pricing.
-
-Example corrections:
-
-| Before | After |
-|---------|-------|
-| Basci | Basic |
-| Standrd | Standard |
-| Premum | Premium |
-| Delux | Deluxe |
-| Luxry | Luxury |
-| one fifty | $150.00 |
-| sixty | 60 |
-
-## Raw Data
+## Table Rows validation
+<img width="567" height="571" alt="CLEA_ DATA VALIDATION IMAGE" src="https://github.com/user-attachments/assets/acdc5355-f6cc-4c04-80ee-fba7a113204c" />
 
 ### Clients
 <img width="875" height="525" alt="RAW_CLIENT IMAGE" src="https://github.com/user-attachments/assets/929cf26d-08db-4d63-af72-0f63595e9d1d" />
@@ -155,7 +127,33 @@ Example corrections:
 <img width="481" height="545" alt="BOOKINGS_RAW IMAGE" src="https://github.com/user-attachments/assets/586ddde0-6eb8-4503-b160-5ad22fb3dafe" />
 
  
-### Clean Data
+### CLEANED DATA
+Cleaning techniques included:
+
+- TRIM()
+- LOWER()
+- INITCAP()
+- COALESCE()
+- NULLIF()
+- CASE expressions
+- REGEXP_REPLACE()
+- CAST()
+- TO_CHAR()
+  
+Business rules were applied to standardize package tiers, durations, and pricing.
+
+Example corrections:
+
+| Before | After |
+|---------|-------|
+| Basci | Basic |
+| Standrd | Standard |
+| Premum | Premium |
+| Delux | Deluxe |
+| Luxry | Luxury |
+| one fifty | $150.00 |
+| sixty | 60 |
+
 
 ### Clients
 <img width="755" height="545" alt="CLEANED_CLIENTS IMAGE" src="https://github.com/user-attachments/assets/4f1d4ec3-f6c5-462d-889c-e7d1014336cc" />
@@ -216,11 +214,14 @@ Example analyses included:
 - Booking trends
 - Session trends
 
-*(Insert analysis screenshot here)*
+<img width="553" height="429" alt="SESSIONS_REVENUE" src="https://github.com/user-attachments/assets/429f04cd-7469-4d81-bdfc-7e808516d932" />
 
-```markdown
-![Analysis](Images/analysis_results.png)
-```
+<img width="355" height="336" alt="AVERAGE_SESSIONS_DURATIONS" src="https://github.com/user-attachments/assets/e8ed96de-b581-47ba-868a-d2af3dac3be3" />
+
+<img width="401" height="547" alt="Customer with the most booked sessions" src="https://github.com/user-attachments/assets/c30acae9-7889-497d-81e5-7256ec18d63a" />
+
+<img width="327" height="402" alt="Most_Popular_Package" src="https://github.com/user-attachments/assets/a6cc1868-6b82-4410-8b01-8f2f87ca0d03" />
+
 
 ---
 
