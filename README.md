@@ -187,8 +187,18 @@ Validation included:
 - Email formatting
 - Phone number formatting
 
-
+## TABLE_VALIDATION
 <img width="567" height="571" alt="CLEA_ DATA VALIDATION IMAGE" src="https://github.com/user-attachments/assets/ce51e261-bb9b-47a3-b435-97f92a49e659" />
+
+## PHONE_VALIDATION
+<img width="375" height="517" alt="Phone_validation" src="https://github.com/user-attachments/assets/6c1f7ff2-4816-4611-91ca-0e3aacba3826" />
+
+## EMAIL_VALIDATION
+<img width="322" height="320" alt="Email_Validation" src="https://github.com/user-attachments/assets/2b7d86f4-1151-4f29-a023-d29d83ef27fb" />
+
+## DURATION_VALIDATION
+<img width="593" height="515" alt="Duration_validation" src="https://github.com/user-attachments/assets/d661b15c-b001-4e19-9a19-5d2a9fcef579" />
+
 
 
 ---
